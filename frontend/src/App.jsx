@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API = "https://campusconnect-backend-js0y.onrender.com/api";
 const getToken = () => localStorage.getItem("cc_token");
 async function api(path, options = {}) {
   const response = await fetch(`${API}${path}`, {
