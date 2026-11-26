@@ -1,3 +1,18 @@
+AWS Live demo link
+
+
+---
+
+## 🚀 AWS Live Deployment
+
+**Live Website:**  
+http://ServiceHub-ALB-180870333.ap-south-1.elb.amazonaws.com
+
+
+**Hosting:** AWS EC2 + Application Load Balancer  
+**Database:** MongoDB Atlas
+
+
 # CampusConnect
 
 A beginner-friendly full-stack student collaboration platform MVP.
