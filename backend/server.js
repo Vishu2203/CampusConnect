@@ -7,7 +7,12 @@ import jwt from "jsonwebtoken";
 
 dotenv.config();
 const app = express();
-app.use(cors({ origin: process.env.CLIENT_URL || "http://localhost:5173" }));
+app.use(cors({
+  origin: (origin, cb) => {
+    if (!origin || origin === "http://localhost:5173" || origin.endsWith(".vercel.app")) return cb(null, true);
+    cb(new Error("Not allowed by CORS"));
+  }
+}));
 app.use(express.json());
 
 const { Schema, model } = mongoose;
